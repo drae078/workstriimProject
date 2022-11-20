@@ -1,0 +1,47 @@
+{% include 'main.html' %}
+
+{% block content %}
+    <div class="container py-4">
+        <div class="card mb-3" style="max-width: 540px; margin: auto;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="..." class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                  <div class="row align-item-start">
+                      <div class="col col-9">
+                        <h6 class="card-title">Name:</h6>
+                        <h6 class="card-title">Email:</h6>
+                        <h6 class="card-title">Cell:</h6>
+                        <h6 class="card-title">Location:</h6>
+                      </div>
+                      <div class="col col-3" style="text-align: right;">
+                          <a class="" href="#">Edit</a>
+                      </div>
+
+                  </div>
+                  <hr>
+                  <br>
+                  <div class="row align-item-start">
+                      <div class="col col-9">
+                        <h6 class="card-title">Jobs Worked: <span class="profile-work-numbers"></span></h6>
+                        <h6 class="card-title">Rating: <span class="profile-work-numbers"></span></h6>
+                        <h6 class="card=title"> Jobs Posted:<span class="profile-work-numbers" style="font-family: Roboto, Verdana, Arial, sans-serif;"> 5</span></h6>
+                      </div>
+                      <div class="col col-3" style="text-align: right;">
+                          <a class="" href="{% url 'my_activity' %}">Details</a>
+                      </div>
+
+                  </div>
+
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+{% endblock content %}

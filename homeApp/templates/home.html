@@ -1,0 +1,35 @@
+{% load static %}
+{% include 'main.html' %}
+<link rel="stylesheet" href="{% static 'homeApp/home.css' %}">
+<div class="container main-container">
+    {% block content%}
+        <div class="container">
+            <div class="card home-card">
+                <form id="job-details-form" method="POST" action="{% url 'job_details' 4 %}">
+                    {% csrf_token %}
+                    <div class="card-body">
+                      <div class="row align-item-start">
+                          <div class="col">
+                              <h5 class="card-title">Card title</h5>
+                          </div>
+                          <div class="col">
+                              <h5 class="card-title payment">$15</h5>
+                          </div>
+
+                      </div>
+
+                    <h6 class="card-subtitle">San Antonio, TX. 78222</h6>
+                      <br>
+                      <div class="">
+                          <small class="text-muted additional-details">Job details</small>
+                          <p class="card-text text-muted">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      </div>
+                  </div>
+                </form>
+
+            </div>
+        </div>
+    {% endblock content%}
+</div>
+<script type="text/javascript" src="{% static 'homeApp/jobClick.js' %}"></script>
+

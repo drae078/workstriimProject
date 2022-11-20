@@ -1,0 +1,9 @@
+.main-container {
+    margin-top: 4rem;
+}
+.btn.btn-outline-secondary, .btn.btn-outline-primary {
+    width: inherit;
+}
+.container.btn-container {
+    max-width: 500px;
+}

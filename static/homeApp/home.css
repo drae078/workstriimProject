@@ -1,0 +1,18 @@
+.home-card{
+    max-width: 663px;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.payment {
+    text-align: right;
+}
+.card-title {
+    font-weight: bold;
+}
+.additional-details {
+    font-style: italic;
+}
+.card-subtitle {
+    font-weight: normal;
+}

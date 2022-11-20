@@ -1,0 +1,47 @@
+{% load static %}
+{% include 'main.html' %}
+<link rel="stylesheet" href="{% static 'jobDetails/job_details.css' %}">
+{% block content %}
+    <div class="container job-container">
+        <div class="row align-item-start">
+            <div class="col">
+                <div class="container">
+                <h2>Senior Data Analyst</h2>
+                </div>
+                <div class="container">
+                    <h5 class="card-subtitle text-muted" style="font-weight: normal ">Convera Denver, CO</h5>
+                </div>
+                <br>
+                <div class="container">
+                    <h5 class="card-title" style="font-weight: bold;">Work description</h5>
+                </div>
+                <div class="container">
+                    <div class="card-body text-muted">
+                        This is a test description of the posted job...............................
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container group-btn-container">
+                    {% if images %}
+                        <div class="container">
+                            <img src="" class="job-images-thumbnail">
+                        </div>
+                        <div class="container btn-container">
+                            <button type="button" class="btn btn-outline-secondary">Claim this Job</button>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container btn-container">
+            <button type="button" class="btn btn-outline-primary" style="width: inherit">Claim this Job</button>
+        </div>
+        <br>
+        <div class="container btn-container">
+            <button type="button" class="btn btn-outline-secondary">Send a Message</button>
+        </div>
+
+    </div>
+{% endblock content %}
