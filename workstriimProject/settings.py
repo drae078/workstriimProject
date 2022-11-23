@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'jobDetails',
     'createPost',
     'activityDetails',
+    'messagesApp',
 ]
 
 MIDDLEWARE = [

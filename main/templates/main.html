@@ -8,17 +8,20 @@
     <script type="text/javascript"
     src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
     </script>
-
 </head>
 
 <body>
-<nav class="nav">
-    <a class="nav-link active" aria-current="page" href={% url 'home' %}>HOME</a>
+<nav class="nav fixed-top">
+    <a class="nav-link active home-link" aria-current="page" href={% url 'home' %}>HOME</a>
     <a class="nav-link" href= {% url 'new_post' %}>Create Post</a>
     <a class="nav-link" href={% url 'profile' %}>Profile</a>
     <a class="nav-link" href={% url 'my_activity' %}>Activity</a>
+    <a class="nav-link" href={% url 'my_messages' %}>
+        <span class="material-symbols-outlined">comment</span><span>5</span>
+    </a>
 </nav>
 
+</div>
     {% block content %}
 
     {% endblock content %}

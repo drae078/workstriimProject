@@ -2,7 +2,7 @@
 {% include 'main.html' %}
 <link rel="stylesheet" href="{% static 'jobDetails/job_details.css' %}">
 {% block content %}
-    <div class="container job-container">
+    <div class="container job-container" style="margin-top: 100px;">
         <div class="row align-item-start">
             <div class="col">
                 <div class="container">
@@ -36,7 +36,7 @@
         </div>
         <br>
         <div class="container btn-container">
-            <button type="button" class="btn btn-outline-primary" style="width: inherit">Claim this Job</button>
+            <button id="claim-btn" type="button" class="btn btn-outline-primary" name="claim-btn" style="width: inherit">Claim this Job</button>
         </div>
         <br>
         <div class="container btn-container">
@@ -45,3 +45,4 @@
 
     </div>
 {% endblock content %}
+<script type="text/javascript" src="{% static 'jobDetails/jobDetails.js' %}"></script>

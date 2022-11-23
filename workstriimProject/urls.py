@@ -15,12 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from jobDetails import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', include('homeApp.urls'), name='main'),
+    path('job_details/claimed_job/', views.claimed_job, name='claimed_job'),
     path('profile/', include('profileApp.urls'), name='profile'),
     path('create_post/', include('createPost.urls'), name="create_post"),
+    path('my_messages/', include('messagesApp.urls'), name='my_messages'),
     path('job_details/<int:num>', include('jobDetails.urls'), name='job_details'),
     path('activity_details/', include('activityDetails.urls'), name='activity_details'),
 ]

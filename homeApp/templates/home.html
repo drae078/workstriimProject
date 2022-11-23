@@ -1,8 +1,19 @@
 {% load static %}
 {% include 'main.html' %}
 <link rel="stylesheet" href="{% static 'homeApp/home.css' %}">
-<div class="container main-container">
+<div class="container main-container" style="margin-top: 100px">
+
     {% block content%}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success d-flex align-items-center" role="alert">
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  <div style="margin: auto">
+                      {{ message }}
+                  </div>
+                </div>
+            {% endfor %}
+        {% endif %}
         <div class="container">
             <div class="card home-card">
                 <form id="job-details-form" method="POST" action="{% url 'job_details' 4 %}">
@@ -15,9 +26,7 @@
                           <div class="col">
                               <h5 class="card-title payment">$15</h5>
                           </div>
-
                       </div>
-
                     <h6 class="card-subtitle">San Antonio, TX. 78222</h6>
                       <br>
                       <div class="">
@@ -26,9 +35,9 @@
                       </div>
                   </div>
                 </form>
-
             </div>
         </div>
+        <br>
     {% endblock content%}
 </div>
 <script type="text/javascript" src="{% static 'homeApp/jobClick.js' %}"></script>

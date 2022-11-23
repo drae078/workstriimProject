@@ -1,7 +1,9 @@
+{% load static %}
 {% include 'main.html' %}
 
+<link rel="stylesheet" href="{% static 'profileApp/profile.css' %}">
 {% block content %}
-    <div class="container py-4">
+    <div class="container py-4" style="margin-top: 100px;">
         <div class="card mb-3" style="max-width: 540px; margin: auto;">
           <div class="row g-0">
             <div class="col-md-4">

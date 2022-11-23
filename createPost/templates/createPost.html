@@ -2,16 +2,17 @@
 {% include 'main.html' %}
 <link rel="stylesheet" href="{% static 'createPost/createPost.css' %}">
 {% block content %}
-    <div class="container main-container">
-        <form class="create-post-form" method="POST" enctype="multipart/form-data">
+    <div class="container main-container" style="margin-top: 100px;">
+        <form class="create-post-form" method="POST" enctype="multipart/form-data" action="{% url "new_job" %}">
+            {% csrf_token %}
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Job Title" aria-label="Job Title" aria-describedby="button-addon2">
             </div>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Payment Amount" aria-label="Payment Amount" aria-describedby="button-addon2">
+              <input type="number" class="form-control" placeholder="Payment Amount" aria-label="Payment Amount" aria-describedby="button-addon2">
             </div>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Start Date" aria-label="Start Date" aria-describedby="button-addon2">
+              <input type="datetime-local" class="form-control" placeholder="Start Date" aria-label="Start Date" aria-describedby="button-addon2">
             </div>
             <div class="input-group mb-3">
                 <div class="form-floating">
@@ -25,13 +26,14 @@
             </div>
             <br>
             <div class="container btn-container">
-                <button type="button" class="btn btn-outline-primary">Post this Job</button>
+                <button type="submit" class="btn btn-outline-primary">Post this Job</button>
             </div>
             <br>
             <div class="container btn-container">
-                <button type="button" class="btn btn-outline-secondary">Clear Form</button>
+                <button type="submit" class="btn btn-outline-secondary">Clear Form</button>
             </div>
         </form>
     </div>
 
 {% endblock content %}
+<script type="text/javascript" src="{% static 'createPost/create_post.js' %}"></script>
