@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'createPost',
     'activityDetails',
     'messagesApp',
+    'messageHistory',
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,6 @@
 $(document).ready(function() {
-    $(".btn-outline-primary").click(function () {
+
+    $("#claim-btn").click(function () {
         $(this).prop("disabled",true)
         $(this).html("Claimed")
 

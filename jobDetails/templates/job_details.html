@@ -1,48 +1,65 @@
-{% load static %}
 {% include 'main.html' %}
+{% load static %}
 <link rel="stylesheet" href="{% static 'jobDetails/job_details.css' %}">
 {% block content %}
     <div class="container job-container" style="margin-top: 100px;">
-        <div class="row align-item-start">
-            <div class="col">
-                <div class="container">
-                <h2>Senior Data Analyst</h2>
-                </div>
-                <div class="container">
-                    <h5 class="card-subtitle text-muted" style="font-weight: normal ">Convera Denver, CO</h5>
-                </div>
-                <br>
-                <div class="container">
-                    <h5 class="card-title" style="font-weight: bold;">Work description</h5>
-                </div>
-                <div class="container">
-                    <div class="card-body text-muted">
-                        This is a test description of the posted job...............................
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="container group-btn-container">
-                    {% if images %}
-                        <div class="container">
-                            <img src="" class="job-images-thumbnail">
-                        </div>
-                        <div class="container btn-container">
-                            <button type="button" class="btn btn-outline-secondary">Claim this Job</button>
-                        </div>
-                    {% endif %}
-                </div>
+        <div class="container">
+        <h2>Senior Data Analyst</h2>
+        </div>
+        <div class="container">
+            <h5 class="card-subtitle text-muted" style="font-weight: normal ">Convera Denver, CO</h5>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <h5 class="card-title" style="font-weight: bold;">Work description</h5>
+        </div>
+        <div class="container">
+            <div class="card-body text-muted">
+                This is a test description of the posted job...............................
             </div>
         </div>
         <br>
         <div class="container btn-container">
-            <button id="claim-btn" type="button" class="btn btn-outline-primary" name="claim-btn" style="width: inherit">Claim this Job</button>
+            <button id="claim-btn" type="button" class="btn btn-outline-primary" style="width: inherit">Claim this Job</button>
         </div>
         <br>
         <div class="container btn-container">
-            <button type="button" class="btn btn-outline-secondary">Send a Message</button>
+            <a id="msg-btn" type="button" class="btn btn-outline-secondary" href="{% url 'send_message' 4 %}">Send a Message</a>
         </div>
 
     </div>
+
+
+            {% if images %}
+                <div id="img-container" class="container group-btn-container">
+{#                {% for image in images %}#}
+                <div id="carouselExampleControls" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src={% static 'images/woman1.jpg' %} class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src={% static 'images/woman2.jpg' %} class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src={% static 'images/baby1.jpg' %} class="d-block w-100" alt="...">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+{#                {% endfor %}#}
+                </div>
+            {% endif %}
+
+
 {% endblock content %}
 <script type="text/javascript" src="{% static 'jobDetails/jobDetails.js' %}"></script>
+<script type="text/javascript" src="{% static 'jobDetails/sendMessage.js' %}"></script>

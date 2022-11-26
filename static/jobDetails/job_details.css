@@ -4,6 +4,9 @@
 .btn.btn-outline-secondary {
     width: inherit;
 }
+.btn.btn-outline-primary {
+    width: inherit;
+}
 .container.btn-container {
     max-width: 500px;
 }
@@ -12,4 +15,11 @@ body {
 }
 .job-container {
     margin-top: 2rem;
+}
+#img-container {
+    margin-top: 100px;
+}
+body {
+    margin: auto;
+    max-width: 550px;
 }

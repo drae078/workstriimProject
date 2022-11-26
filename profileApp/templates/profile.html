@@ -6,19 +6,19 @@
     <div class="container py-4" style="margin-top: 100px;">
         <div class="card mb-3" style="max-width: 540px; margin: auto;">
           <div class="row g-0">
-            <div class="col-md-4">
-              <img src="..." class="img-fluid rounded-start" alt="...">
+            <div class="col-md-4 profile-img">
+              <img src="{% static 'images/baby1.jpg' %}" class="img-fluid rounded-start" alt="...">
             </div>
             <div class="col-md-8">
               <div class="card-body">
                   <div class="row align-item-start">
-                      <div class="col col-9">
-                        <h6 class="card-title">Name:</h6>
-                        <h6 class="card-title">Email:</h6>
-                        <h6 class="card-title">Cell:</h6>
-                        <h6 class="card-title">Location:</h6>
+
+                      <div class="col col-10">
+                        <h6 class="card-title username"><span style="font-weight: bold;">username: </span><span style="font-weight: normal;">andraeb78</span></h6>
+                        <h6 class="card-title email"><span style="font-weight: bold;">email: </span><span style="font-weight: normal;">andraeb78@workstriim.com</span></h6>
+                        <h6 class="card-title zipcode"><span style="font-weight: bold;">zip code: </span><span style="font-weight: normal;">78582</span></h6>
                       </div>
-                      <div class="col col-3" style="text-align: right;">
+                      <div class="col col-2" style="text-align: right;">
                           <a class="" href="#">Edit</a>
                       </div>
 
@@ -27,17 +27,16 @@
                   <br>
                   <div class="row align-item-start">
                       <div class="col col-9">
-                        <h6 class="card-title">Jobs Worked: <span class="profile-work-numbers"></span></h6>
-                        <h6 class="card-title">Rating: <span class="profile-work-numbers"></span></h6>
-                        <h6 class="card=title"> Jobs Posted:<span class="profile-work-numbers" style="font-family: Roboto, Verdana, Arial, sans-serif;"> 5</span></h6>
+                        <h6 class="card-title">Jobs Worked: <span class="profile-work-numbers"></span>17</h6>
+                        <h6 class="card-title">Rating: <span class="profile-work-numbers"></span>4.7</h6>
+                          <h6 class="card-title">Reviews: <span class="profile-work-numbers"></span>24</h6>
+                        <h6 class="card=title"> Jobs Posted:<span class="profile-work-numbers" style="font-family: Roboto, Verdana, Arial, sans-serif;">5</span></h6>
                       </div>
                       <div class="col col-3" style="text-align: right;">
-                          <a class="" href="{% url 'my_activity' %}">Details</a>
                       </div>
 
                   </div>
 
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
               </div>
             </div>

@@ -1,0 +1,6 @@
+.profile-img {
+    padding: 5px;
+}
+.username, email, zipcode {
+    font-weight: bold;
+}
